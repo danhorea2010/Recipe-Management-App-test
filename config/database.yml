@@ -81,6 +81,4 @@ test:
 #
 production:
   <<: *default
-  database: recipe_manger_api_production
-  username: recipe_manger_api
-  password: <%= ENV["RECIPE_MANGER_API_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
