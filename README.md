@@ -5,6 +5,7 @@
 ## Version details
 * Ruby version used: 3.1.2
 * Rails version used: 7.0.4
+* Node version used: 18.12.0
 * Install dependencies with:
 ```bash
 bundle install
