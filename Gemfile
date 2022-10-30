@@ -34,11 +34,15 @@ gem "jbuilder"
 gem "devise"
 
 # Admin Dashboard
-gem 'activeadmin', github: 'activeadmin/activeadmin', branch: 'master'
+gem 'activeadmin'
 
 gem 'cancancan'
 gem 'draper'
 gem 'pundit'
+
+# Easier and more pleasant to write HTML
+gem "haml-rails"
+gem "html2haml"
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
