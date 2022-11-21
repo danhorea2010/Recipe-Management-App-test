@@ -3,11 +3,9 @@
 one:
   protein: 1
   fat: 1
-  carbs: MyString
-  integer: MyString
+  carbs: 1
 
 two:
   protein: 1
   fat: 1
-  carbs: MyString
-  integer: MyString
+  carbs: 1
