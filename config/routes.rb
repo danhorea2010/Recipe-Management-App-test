@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :macros
+  resources :macros_controllers
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   devise_for :users
@@ -11,6 +13,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :recipes, only: [:index]
       resources :ingredients, only: [:index]
+      resources :macros, only: [:index]
     end
   end
 

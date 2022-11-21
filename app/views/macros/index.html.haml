@@ -1,0 +1,19 @@
+%h1 Listing macros
+
+%table
+  %thead
+    %tr
+      %th
+      %th
+      %th
+
+  %tbody
+    - @macros.each do |macro|
+      %tr
+        %td= link_to 'Show', macro
+        %td= link_to 'Edit', edit_macro_path(macro)
+        %td= link_to 'Destroy', macro, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Macro', new_macro_path
