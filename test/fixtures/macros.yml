@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  proteins: 1
+  fats: 1
+  carbs: 1
+
+two:
+  proteins: 1
+  fats: 1
+  carbs: 1
