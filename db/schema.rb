@@ -43,16 +43,12 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_28_072353) do
   create_table "ingredients", force: :cascade do |t|
     t.string "name"
     t.integer "calories"
-    t.string "type"
+    t.string "ingredient_type"
+    t.integer "proteins"
+    t.integer "fats"
+    t.integer "carbs"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "ingredients_macros", id: false, force: :cascade do |t|
-    t.bigint "ingredient_id"
-    t.bigint "macro_id"
-    t.index ["ingredient_id"], name: "index_ingredients_macros_on_ingredient_id"
-    t.index ["macro_id"], name: "index_ingredients_macros_on_macro_id"
   end
 
   create_table "ingredients_recipes", id: false, force: :cascade do |t|
@@ -62,17 +58,9 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_28_072353) do
     t.index ["recipe_id"], name: "index_ingredients_recipes_on_recipe_id"
   end
 
-  create_table "macros", force: :cascade do |t|
-    t.integer "proteins"
-    t.integer "fats"
-    t.integer "carbs"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "recipes", force: :cascade do |t|
     t.string "name"
-    t.string "type"
+    t.string "recipe_type"
     t.integer "calories"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
